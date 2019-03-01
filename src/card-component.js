@@ -11,3 +11,11 @@ export function createCard(pokemon) {
     const dom = template.content;
     return dom;
 }
+
+const cardContainer = document.getElementById('card-container');
+export default function loadCards(pokedex) {
+    pokedex.forEach(pokemon => {
+        const dom = createCard(pokemon);
+        cardContainer.appendChild(dom);
+    });
+}
