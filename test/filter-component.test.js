@@ -2,10 +2,14 @@ const test = QUnit.test;
 
 QUnit.module('filter creation');
 
-function createOption() {
-    return /*html*/`
-        <option name="type" value="grass">grass</option>
+function createOption(type) {
+    const html = /*html*/`
+        <option name="type" value="${type}">${type}</option>
     `;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const dom = template.content;
+    return dom;
 }
 
 test('create option selector for type', assert => {
@@ -13,8 +17,12 @@ test('create option selector for type', assert => {
     const expected = /*html*/`
         <option name="type" value="grass">grass</option>
     `;
+    const type = 'grass';
+
     // act
-    const result = createOption();
+    const result = createOption(type);
+
+
     // assert
-    assert.equal(result, expected);
+    assert.htmlEqual(result, expected);
 });
