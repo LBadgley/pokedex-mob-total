@@ -40,7 +40,7 @@ export default function loadFilterOptions(types, callback) {
 
     typeChoice.addEventListener('change', () => {
         const selected = {
-            type: typeChoice.value
+            type_1: typeChoice.value
         };
         callback(selected);
     });

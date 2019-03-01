@@ -13,7 +13,11 @@ export function createCard(pokemon) {
 }
 
 const cardContainer = document.getElementById('card-container');
+
 export default function loadCards(pokedex) {
+    while(cardContainer.children.length > 0) {
+        cardContainer.lastElementChild.remove();
+    }
     pokedex.forEach(pokemon => {
         const dom = createCard(pokemon);
         cardContainer.appendChild(dom);

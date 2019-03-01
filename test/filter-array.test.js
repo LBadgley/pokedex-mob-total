@@ -7,18 +7,18 @@ QUnit.module('filter array');
 test('filter an array based on blue', assert => {
     // arrange
     const array = [
-        { type: 'blue', id: 1 },
-        { type: 'green', id: 2 },
-        { type: 'blue', id: 2 }
+        { type_1: 'blue', id: 1 },
+        { type_1: 'green', id: 2 },
+        { type_1: 'blue', id: 2 }
     ];
     
     const filterOptions = {
-        type: 'blue'
+        type_1: 'blue'
     };
 
     const expected = [
-        { type: 'blue', id: 1 },
-        { type: 'blue', id: 2 }        
+        { type_1: 'blue', id: 1 },
+        { type_1: 'blue', id: 2 }        
     ];
 
     // act
@@ -31,19 +31,19 @@ test('filter an array based on blue', assert => {
 test('return all items if no selection', assert => {
     // arrange
     const array = [
-        { type: 'blue', id: 1 },
-        { type: 'green', id: 2 },
-        { type: 'blue', id: 2 }
+        { type_1: 'blue', id: 1 },
+        { type_1: 'green', id: 2 },
+        { type_1: 'blue', id: 2 }
     ];
     
     const filterOptions = {
-        type: ''
+        type_1: ''
     };
 
     const expected = [
-        { type: 'blue', id: 1 },
-        { type: 'green', id: 2 },
-        { type: 'blue', id: 2 }      
+        { type_1: 'blue', id: 1 },
+        { type_1: 'green', id: 2 },
+        { type_1: 'blue', id: 2 }      
     ];
 
     // act
