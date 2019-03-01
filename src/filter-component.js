@@ -36,4 +36,13 @@ export default function loadFilterOptions(types) {
         const dom = createOption(type);
         typeChoice.appendChild(dom);
     });
+
+    typeChoice.addEventListener('change', () => {
+        const selected = {
+            type: typeChoice.value
+
+        };
+            
+        console.log(selected);
+    });
 }
