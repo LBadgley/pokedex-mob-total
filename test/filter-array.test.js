@@ -1,14 +1,8 @@
+import filterArray from '../src/filter-array.js';
+
 const test = QUnit.test;
 
 QUnit.module('filter array');
-
-function filterArray(array, filterOptions) {
-    return array.filter(item => {
-        const hasType = !filterOptions.type || filterOptions.type === item.type;
-
-        return hasType;
-    });
-}
 
 test('filter an array based on blue', assert => {
     // arrange
