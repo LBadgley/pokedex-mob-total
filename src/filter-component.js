@@ -31,7 +31,8 @@ export const types = [
 
 const typeChoice = document.getElementById('type-choice');
 
-export default function loadFilterOptions(types) {
+export default function loadFilterOptions(types, callback) {
+
     types.forEach(type => {
         const dom = createOption(type);
         typeChoice.appendChild(dom);
@@ -40,9 +41,7 @@ export default function loadFilterOptions(types) {
     typeChoice.addEventListener('change', () => {
         const selected = {
             type: typeChoice.value
-
         };
-            
-        console.log(selected);
+        callback(selected);
     });
 }
