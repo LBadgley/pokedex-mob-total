@@ -9,15 +9,14 @@
 <body>
     <header>
         <h1>Pokedex Redux</h1>
-        <form id="filter-choices">
-            Filter By Type 
-            <select name="type" id="type-choice"></select>
-            <option name="type" value="grass">grass</option>
-            <option name="type" value="grass">poison</option>
-            <option name="type" value="grass">grass</option>
-            <button>filter me!</button>
-        </form>
+            <select name="type" id="type-choice">
+                <option name="type" value="" disabled selected>Select a type!</option>
+                <option name="type" value="grass">grass</option>
+                <option name="type" value="grass">poison</option>
+                <option name="type" value="normal">normal</option>
+            </select>
     </header>
+</br>
     <main>
         <section>
             <ul id="card-container"></ul>
