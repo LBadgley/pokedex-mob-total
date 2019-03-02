@@ -1,19 +1,6 @@
+import sortArray from '../src/sort-array.js';
 const test = QUnit.test;
 QUnit.module('sort array functionality');
-
-function sortArray(array, sortChoice) {
-    const property = sortChoice.property;
-    return array.sort((a, b) => {
-        if(a[property] === b[property]) {
-            return 0;
-        }
-        if(a[property] > b[property]) {
-            return -1;
-        }
-        return 1;
-    });
-
-}
 
 test('sort by attack', assert => {
     // arrange
