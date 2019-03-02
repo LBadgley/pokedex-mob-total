@@ -6,7 +6,9 @@ import loadSort from './sort-component.js';
 
 loadCards(pokedex);
 
-loadSort();
+loadSort(sortSelect => {
+    console.log(sortSelect);
+});
 
 loadFilterOptions(types, selected => {
     const filteredArray = filterArray(pokedex, selected);
